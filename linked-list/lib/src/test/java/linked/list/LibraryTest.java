@@ -4,11 +4,37 @@
 package linked.list;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 
 public class LibraryTest {
-    @Test public void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+//    @Test public void someLibraryMethodReturnsTrue() {
+//        Library classUnderTest = new Library();
+//        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+//    }
+    LinkedList<Integer> testLinkedList;
+    @Test
+    public void testEmpty() {
+        testLinkedList = new LinkedList<>();
+        Assertions.assertTrue( testLinkedList.length >= 0 ,"Return true if linkedList has length ");
+    }
+    @Test
+    public void testAdding() {
+        testLinkedList = new LinkedList<>();
+        testLinkedList.append(66);
+        Assertions.assertTrue( testLinkedList.length == 1 ,"Return true if linkedList has length");
+    }
+    @Test
+    public void testHead() {
+        testLinkedList = new LinkedList<>();
+        testLinkedList.append(10);
+        testLinkedList.append(11);
+        testLinkedList.append(12);
+        testLinkedList.insertBefore(11 , 15);
+        Assertions.assertEquals(10 , testLinkedList.head.data , "Checks if the head is equal to the  actual value of first node that takes the head place .");
+        Assertions.assertTrue(testLinkedList.length == 4 , "Return true if the length increases when I add more elements.");
+        Assertions.assertTrue(testLinkedList.includes(15) , "Return true if the element is found inside the linkedList");
+        Assertions.assertFalse(testLinkedList.includes(19) , "Return false if the element is not found inside the linkedList");
+        Assertions.assertEquals("{ 10 -> 15 -> 11 -> 12 -> null }" , String.valueOf(testLinkedList));
     }
 }
