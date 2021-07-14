@@ -1,28 +1,30 @@
 package linked.list;
-public class LinkedList <T>{
-    public Node<T>  head;
+
+public class LinkedList<T> {
+    public Node<T> head;
     public int length;
+
     public LinkedList() {
         this.head = null;
     }
-    public void insert(T data){
+
+    public void insert(T data) {
         Node<T> newNode = new Node<>(data);
-        if(this.head == null) {
+        if (this.head == null) {
             head = newNode;
-        }
-        else {
+        } else {
             Node temp = head;
             head = newNode;
             head.next = temp;
         }
         length++;
     }
-    public void insertAfter(T data ,T newData){
+
+    public void insertAfter(T data, T newData) {
         Node<T> newNode = new Node<>(newData);
-        if(this.head == null) {
+        if (this.head == null) {
             head = newNode;
-        }
-        else {
+        } else {
             Node<T> temp = head;
             while (temp.data != data) {
                 temp = temp.next;
@@ -32,15 +34,15 @@ public class LinkedList <T>{
         }
         length++;
     }
-    public void insertBefore(T data , T newData){
+
+    public void insertBefore(T data, T newData) {
         Node<T> newNode = new Node<>(newData);
-        if(this.head == null) {
+        if (this.head == null) {
             head = newNode;
-        }else if(data == head.data){
+        } else if (data == head.data) {
             newNode.next = head;
             head = newNode;
-        }
-        else {
+        } else {
             Node<T> temp = head;
             while (temp.next.data != data) {
                 temp = temp.next;
@@ -50,12 +52,12 @@ public class LinkedList <T>{
         }
         length++;
     }
-    public void append (T data) {
+
+    public void append(T data) {
         Node<T> newNode = new Node<>(data);
-        if(this.head == null) {
+        if (this.head == null) {
             head = newNode;
-        }
-        else {
+        } else {
             Node<T> temp = head;
             while (temp.next != null) {
                 temp = temp.next;
@@ -64,10 +66,11 @@ public class LinkedList <T>{
         }
         length++;
     }
-    public boolean includes (T key) {
+
+    public boolean includes(T key) {
         Node<T> temp = head;
         while (temp != null) {
-            if(temp.data.equals(key)){
+            if (temp.data.equals(key)) {
                 return true;
             }
             temp = temp.next;
@@ -75,6 +78,31 @@ public class LinkedList <T>{
         return false;
     }
 
+
+    public T findKthNode(int k){
+        int maxIdx = length - 1;
+        int idxValue = maxIdx - k;
+
+        Node<T> temp = head;
+        int n = 0;
+
+
+        if(k >= length || k < 0){
+            return null;
+        }
+        else if(idxValue == n){
+            return temp.data;
+        }else {
+            while (idxValue != n){
+                temp = temp.next;
+                n++;
+
+            }
+            return temp.data;
+
+        }
+
+    }
     @Override
     public String toString() {
         String result = "{ ";
