@@ -107,6 +107,23 @@ public class LinkedList<T> {
 //    public LinkedList<T> zipList(LinkedList<T> one, LinkedList<T> two){
 //
 //    }
+public static LinkedList<Integer> zipList(LinkedList<Integer> one, LinkedList<Integer> two) {
+    LinkedList<Integer> zipList = new LinkedList<>();
+    int maxLength = Math.max(one.length, two.length);
+    Node<Integer> temp1 = one.head;
+    Node<Integer> temp2 = two.head;
+    for(int i=1 ; i<=maxLength; i++ ){
+        if (i <= one.length){
+            zipList.append(temp1.data);
+            temp1 = temp1.next;
+        }
+        if(i <= two.length){
+            zipList.append(temp2.data);
+            temp2 = temp2.next;
+        }
+    }
+    return zipList;
+}
     @Override
     public String toString() {
         String result = "{ ";
