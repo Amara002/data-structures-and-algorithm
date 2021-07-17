@@ -7,7 +7,7 @@ import com.sun.tools.javac.Main;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-
+import static linked.list.LinkedList.zipList;
 public class LibraryTest {
 //    @Test public void someLibraryMethodReturnsTrue() {
 //        Library classUnderTest = new Library();
@@ -16,6 +16,8 @@ public class LibraryTest {
     LinkedList<Integer> testLinkedList;
     LinkedList<Integer> testList;
     LinkedList<Integer> testList1;
+    LinkedList<Integer> testList2;
+
 
     @Test
     public void testEmpty() {
@@ -53,7 +55,7 @@ public class LibraryTest {
         Assertions.assertNull(testList.findKthNode(3));
     }
     @Test
-    public void zipList(){
+    public void zipListTest(){
       testList = new LinkedList<>();
         testList.insert(10);
         testList.insert(8);
@@ -62,6 +64,44 @@ public class LibraryTest {
         testList1.insert(1);
         testList1.insert(2);
         testList1.insert(3);
-        Assertions.assertEquals("{ 10 -> 1 -> 8 -> 2 -> 9 -> 3 -> null }",zipList(testList,testList1));
+        Assertions.assertEquals("{ 9 -> 3 -> 8 -> 2 -> 10 -> 1 -> null }",String.valueOf(zipList(testList,testList1)));
+    }
+    @Test
+    public void testZipListsHappy1() {
+        testList = new LinkedList<>();
+        testList.insert(3);
+        testList.insert(1);
+        testList2 = new LinkedList<>();
+        testList2.insert(4);
+        testList2.insert(9);
+        testList2.insert(5);
+        Assertions.assertEquals("{ 1 -> 5 -> 3 -> 9 -> 4 -> null }",
+                String.valueOf(zipList(testList, testList2)));
+    }
+
+    @Test
+    public void testZipListsHappy2() {
+        testList = new LinkedList<>();
+        testList.insert(3);
+        testList.insert(1);
+        testList2 = new LinkedList<>();
+        testList2.insert(4);
+        testList2.insert(9);
+        testList2.insert(5);
+        Assertions.assertEquals("{ 1 -> 5 -> 3 -> 9 -> 4 -> null }",
+                String.valueOf(zipList(testList, testList2)));
+    }
+
+    @Test
+    public void testZipListsHappy3() {
+        testList = new LinkedList<>();
+        testList.insert(2);
+        testList.insert(3);
+        testList.insert(1);
+        testList2 = new LinkedList<>();
+        testList2.insert(9);
+        testList2.insert(5);
+        Assertions.assertEquals("{ 1 -> 5 -> 3 -> 9 -> 2 -> null }",
+                String.valueOf(zipList(testList, testList2)));
     }
 }
