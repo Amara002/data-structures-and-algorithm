@@ -3,6 +3,7 @@
  */
 package linked.list;
 
+import com.sun.tools.javac.Main;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,6 +14,9 @@ public class LibraryTest {
 //        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
 //    }
     LinkedList<Integer> testLinkedList;
+    LinkedList<Integer> testList;
+    LinkedList<Integer> testList1;
+
     @Test
     public void testEmpty() {
         testLinkedList = new LinkedList<>();
@@ -47,5 +51,17 @@ public class LibraryTest {
         Assertions.assertEquals(8,testList.findKthNode(1));
         Assertions.assertNull(testList.findKthNode(-1));
         Assertions.assertNull(testList.findKthNode(3));
+    }
+    @Test
+    public void zipList(){
+      testList = new LinkedList<>();
+        testList.insert(10);
+        testList.insert(8);
+        testList.insert(9);
+       testList1 = new LinkedList<>();
+        testList1.insert(1);
+        testList1.insert(2);
+        testList1.insert(3);
+        Assertions.assertEquals("{ 10 -> 1 -> 8 -> 2 -> 9 -> 3 -> null }",zipList(testList,testList1));
     }
 }
