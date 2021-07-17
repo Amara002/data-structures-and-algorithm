@@ -37,4 +37,15 @@ public class LibraryTest {
         Assertions.assertFalse(testLinkedList.includes(19) , "Return false if the element is not found inside the linkedList");
         Assertions.assertEquals("{ 10 -> 15 -> 11 -> 12 -> null }" , String.valueOf(testLinkedList));
     }
+    @Test
+    public void findKthTest(){
+        LinkedList<Integer> testList = new LinkedList<>();
+        testList.insert(10);
+        testList.insert(8);
+        testList.insert(9);
+        Assertions.assertEquals(3, testList.length);
+        Assertions.assertEquals(8,testList.findKthNode(1));
+        Assertions.assertNull(testList.findKthNode(-1));
+        Assertions.assertNull(testList.findKthNode(3));
+    }
 }
