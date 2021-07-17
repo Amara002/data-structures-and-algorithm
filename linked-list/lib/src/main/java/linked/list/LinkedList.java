@@ -103,6 +103,10 @@ public class LinkedList<T> {
         }
 
     }
+
+//    public LinkedList<T> zipList(LinkedList<T> one, LinkedList<T> two){
+//
+//    }
     @Override
     public String toString() {
         String result = "{ ";
