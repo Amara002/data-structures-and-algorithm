@@ -46,6 +46,7 @@ public class Stack <T>{
         }
     }
 
+
     @Override
     public String toString() {
         String stackValue = "Stack { ";
