@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="linked.list.LibraryTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-07-17T21:55:19" hostname="STDLTUC-L150" time="0.034">
+  <properties/>
+  <testcase name="testEmpty" classname="linked.list.LibraryTest" time="0.01"/>
+  <testcase name="testHead" classname="linked.list.LibraryTest" time="0.016"/>
+  <testcase name="testZipListsHappy1" classname="linked.list.LibraryTest" time="0.001"/>
+  <testcase name="testZipListsHappy2" classname="linked.list.LibraryTest" time="0.001"/>
+  <testcase name="testZipListsHappy3" classname="linked.list.LibraryTest" time="0.001"/>
+  <testcase name="findKthTest" classname="linked.list.LibraryTest" time="0.001"/>
+  <testcase name="testAdding" classname="linked.list.LibraryTest" time="0.001"/>
+  <testcase name="zipListTest" classname="linked.list.LibraryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
