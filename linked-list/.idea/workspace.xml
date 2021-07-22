@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b39570-5f52-4548-a297-4017577314a7" name="Default Changelist" comment="finish codeChallenge 08" />
+    <list default="true" id="25b39570-5f52-4548-a297-4017577314a7" name="Default Changelist" comment="finish codeChallenge 08">
+      <change afterPath="$PROJECT_DIR$/../stack/app/src/main/java/stack/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../stack/app/src/main/java/stack/AnimalShelter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../stack/app/src/main/java/stack/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../stack/app/src/main/java/stack/Dog.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

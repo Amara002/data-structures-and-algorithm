@@ -1,15 +1,15 @@
 package stack;
 
 public class Queue <T>{
-    Node front;
-    Node rear;
+    Node<T> front;
+    Node<T> rear;
 
     public Queue(){
         this.front = this.rear = null;
     }
 
-    public void enqueue(int value){
-        Node newNode = new Node(value);
+    public void enqueue(T value){
+        Node<T> newNode = new Node(value);
 
         if(this.rear == null){
             this.front = this.rear = newNode;
@@ -19,22 +19,22 @@ public class Queue <T>{
         this.rear = newNode;
     }
 
-    public int dequeue() {
+    public T dequeue() {
 
         if(this.front == null){
             System.out.println("The Queue is empty and the zero value indicates not the actual value");
-            return 0;
+            return null;
         }else{
             Node temp = this.front;
             this.front = this.front.next;
-            return temp.getData();
+            return (T) temp.getData();
         }
     }
 
-    public int peek(){
+    public T peek(){
         if(front == null){
             System.out.println("The Queue is empty and the zero value indicates not the actual value");
-            return 0;
+            return null;
         }else{
             return front.getData();
         }

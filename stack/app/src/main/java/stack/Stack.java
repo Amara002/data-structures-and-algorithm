@@ -1,10 +1,10 @@
 package stack;
 
 public class Stack <T>{
-    Node top;
+    Node<T> top;
 
     public void push(int value){
-        Node newNode = new Node(value);
+        Node<T> newNode = new Node(value);
         if (top == null){
             top = newNode;
         }else{
@@ -15,7 +15,7 @@ public class Stack <T>{
         System.out.println("The value " + value + " pushed to the Stack");
     }
 
-    public int pop(){
+    public <T> int pop(){
 
         int popped=0;
 
@@ -23,7 +23,7 @@ public class Stack <T>{
             System.out.println("The Stack is empty and the zero value indicates not the actual value");
             return 0;
         }else{
-            popped = top.getData();
+            popped = (int) top.getData();
             top = top.next;
         }
         return popped;
@@ -34,7 +34,7 @@ public class Stack <T>{
             System.out.println("The Stack is empty and the zero value indicates not the actual value");
             return 0;
         }else{
-            return top.getData();
+            return (int) top.getData();
         }
     }
 

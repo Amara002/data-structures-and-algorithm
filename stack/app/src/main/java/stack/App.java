@@ -7,7 +7,7 @@ public class App {
     public String getGreeting() {
         return "Hello World!";
     }
-
+    private static final AnimalShelter AnimalShelter = new AnimalShelter();
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
         Stack<Integer> stack = new Stack<>();
@@ -63,7 +63,23 @@ public class App {
 
         stack1.enqueue(7);
         System.out.println(stack1);
+        //    -------------
+        AnimalShelter.enqueue(new Cat("oneCat"));
+        AnimalShelter.enqueue(new Cat("twoCat"));
+        AnimalShelter.enqueue(new Cat("threeCat"));
+        AnimalShelter.enqueue(new Dog("oneDog"));
+        AnimalShelter.enqueue(new Dog("twoDog"));
+        AnimalShelter.enqueue(new Dog("threeDog"));
+        System.out.println(AnimalShelter);
+        AnimalShelter.dequeue("Dog");
+        System.out.println(AnimalShelter);
+        AnimalShelter.dequeue("Cat");
+        AnimalShelter.dequeue("Cat");
+        System.out.println(AnimalShelter);
+        AnimalShelter.enqueue(new Cat("oneCat"));
+        System.out.println(AnimalShelter);
     }
+
 
     }
 
