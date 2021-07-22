@@ -192,4 +192,24 @@ public void enqueueCats(){
         AnimalShelther.dequeue("Cat");
         assertTrue(AnimalShelther.catQ.isEmpty());
     }
+//    ------------------------------
+private static final StackBracket charLeft = new StackBracket();
+
+    @Test
+    public void isBalance(){
+        assertTrue(charLeft.isBalanced("{}"));
+        assertTrue(charLeft.isBalanced("{}(){}"));
+        assertTrue(charLeft.isBalanced("()[[Extra Characters]]"));
+        assertTrue(charLeft.isBalanced("(){}[[]]"));
+        assertTrue(charLeft.isBalanced("{}{Code}[Fellows](())"));
+        assertFalse(charLeft.isBalanced("[({}]"));
+        assertFalse(charLeft.isBalanced("[({}]"));
+        assertFalse(charLeft.isBalanced("(]("));
+        assertFalse(charLeft.isBalanced("{(})"));
+        assertFalse(charLeft.isBalanced("{"));
+        assertFalse(charLeft.isBalanced(")"));
+        assertFalse(charLeft.isBalanced("("));
+        assertFalse(charLeft.isBalanced("["));
+
+    }
 }

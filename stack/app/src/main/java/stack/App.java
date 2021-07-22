@@ -7,7 +7,9 @@ public class App {
     public String getGreeting() {
         return "Hello World!";
     }
+    private static final StackBracket charLeft = new StackBracket();
     private static final AnimalShelter AnimalShelter = new AnimalShelter();
+
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
         Stack<Integer> stack = new Stack<>();
@@ -78,6 +80,25 @@ public class App {
         System.out.println(AnimalShelter);
         AnimalShelter.enqueue(new Cat("oneCat"));
         System.out.println(AnimalShelter);
+
+//        ----------------------
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        //   Return True
+        System.out.println(charLeft.isBalanced("(){}"));
+        //        Return False
+        System.out.println(charLeft.isBalanced("()[{}"));
+        //        Return True
+        System.out.println(charLeft.isBalanced("[(){hii}]"));
+        //        Return True
+        System.out.println(charLeft.isBalanced("{({[]})}"));
+        //        Return True
+        System.out.println(charLeft.isBalanced(""));
+        //        Return False
+        System.out.println(charLeft.isBalanced(")"));
+//        Return False
+        System.out.println(charLeft.isBalanced("("));
     }
 
 
