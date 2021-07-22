@@ -3,7 +3,7 @@ package stack;
 public class Stack <T>{
     Node<T> top;
 
-    public void push(int value){
+        public void push(T value){
         Node<T> newNode = new Node(value);
         if (top == null){
             top = newNode;
@@ -12,29 +12,29 @@ public class Stack <T>{
             top = newNode;
             newNode.next = temp;
         }
-        System.out.println("The value " + value + " pushed to the Stack");
+//        System.out.println("The value " + value + " pushed to the Stack");
     }
 
-    public <T> int pop(){
+    public T pop(){
 
-        int popped=0;
+        T popped=null;
 
         if(top == null){
             System.out.println("The Stack is empty and the zero value indicates not the actual value");
-            return 0;
+            return null;
         }else{
-            popped = (int) top.getData();
+            popped = (T) top.getData();
             top = top.next;
         }
         return popped;
     }
 
-    public int peek(){
+    public T peek(){
         if(top == null){
             System.out.println("The Stack is empty and the zero value indicates not the actual value");
-            return 0;
+            return null;
         }else{
-            return (int) top.getData();
+            return (T) top.getData();
         }
     }
 
