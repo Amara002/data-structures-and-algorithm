@@ -135,5 +135,61 @@ public void enqueueTest(){
         assertEquals("Stack { Null }",pseudoQueue.toString());
         assertEquals(0,pseudoQueue.dequeue());
     }
+//    ------------------
+private static final AnimalShelter AnimalShelther = new AnimalShelter();
+@Test
+public void enqueueCats(){
+    AnimalShelther.enqueue(new Cat("Bonbon"));
+    AnimalShelther.enqueue(new Cat("Moca"));
+    AnimalShelther.enqueue(new Cat("Dongol"));
+    assertEquals("AnimalShelter{catQ=Queue { Bonbon --> Moca --> Dongol --> Null }, dogQ=Queue { Null }}", AnimalShelther.toString());
+}
 
+    @Test
+    public void enqueueDogs(){
+        AnimalShelther.enqueue(new Dog("leo"));
+        AnimalShelther.enqueue(new Dog("Losi"));
+        AnimalShelther.enqueue(new Dog("Melo"));
+        assertEquals("AnimalShelter{catQ=Queue { Null }, dogQ=Queue { leo --> Losi --> Melo --> Null }}", AnimalShelther.toString());
+
+    }
+    @Test
+    public void dequeueCat(){
+        AnimalShelther.enqueue(new Cat("Bonbon"));
+        AnimalShelther.enqueue(new Cat("Moca"));
+        AnimalShelther.enqueue(new Cat("Dongol"));
+        AnimalShelther.dequeue("Cat");
+        assertEquals("AnimalShelter{catQ=Queue { Moca --> Dongol --> Null }, dogQ=Queue { Null }}", AnimalShelther.toString());
+    }
+
+    @Test
+    public void dequeueDogs(){
+        AnimalShelther.enqueue(new Dog("leo"));
+        AnimalShelther.enqueue(new Dog("Losi"));
+        AnimalShelther.enqueue(new Dog("Melo"));
+        AnimalShelther.dequeue("Dog");
+        assertEquals("AnimalShelter{catQ=Queue { Null }, dogQ=Queue { Losi --> Melo --> Null }}", AnimalShelther.toString());
+    }
+
+    @Test
+    public void emptyDog(){
+        AnimalShelther.enqueue(new Dog("oneDog"));
+        AnimalShelther.enqueue(new Dog("twoDog"));
+        AnimalShelther.enqueue(new Dog("threeDog"));
+        AnimalShelther.dequeue("Dog");
+        AnimalShelther.dequeue("Dog");
+        AnimalShelther.dequeue("Dog");
+        assertTrue(AnimalShelther.dogQ.isEmpty());
+    }
+
+    @Test
+    public void emptyCat(){
+        AnimalShelther.enqueue(new Cat("oneCat"));
+        AnimalShelther.enqueue(new Cat("twoCat"));
+        AnimalShelther.enqueue(new Cat("threeCat"));
+        AnimalShelther.dequeue("Cat");
+        AnimalShelther.dequeue("Cat");
+        AnimalShelther.dequeue("Cat");
+        assertTrue(AnimalShelther.catQ.isEmpty());
+    }
 }
