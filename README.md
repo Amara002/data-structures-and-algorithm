@@ -8,5 +8,5 @@
 |  array-reverse         |  [code challenge one](https://github.com/Amara002/data-structures-and-algorithm/tree/array-reverse)         |
 |  array-insert-shift    |  [code challenge two](https://github.com/Amara002/data-structures-and-algorithm/tree/array-insert-shift)    |
 |  array-bianary-search  |  [code challenge three](https://github.com/Amara002/data-structures-and-algorithm/tree/array-binary-search) |
-|  array-reverse         |  [code challenge seven](https://github.com/Amara002/data-structures-and-algorithm/tree/linked-list-kth)     |
-
+|  linked-list-kth       |  [code challenge seven](https://github.com/Amara002/data-structures-and-algorithm/tree/linked-list-kth)     |
+|  linked-list-zip       |  [code challenge seven](https://github.com/Amara002/data-structures-and-algorithm/tree/linked-list-kth)     |
