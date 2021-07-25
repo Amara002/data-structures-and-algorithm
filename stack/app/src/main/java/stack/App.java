@@ -12,11 +12,13 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+//        challenge 10
         Stack<Integer> stack = new Stack<>();
 
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
+        stack.push(5);
+        stack.push(6);
+        stack.push(7);
 
         System.out.println(stack);
 
@@ -28,33 +30,34 @@ public class App {
 
         Queue<Integer> queue = new Queue<>();
 
-        queue.enqueue(1);
-        queue.enqueue(2);
-        queue.enqueue(3);
+        queue.enqueue(5);
+        queue.enqueue(6);
+        queue.enqueue(7);
 
         System.out.println(queue);
         queue.dequeue();
-        queue.dequeue();
-        queue.dequeue();
-//        queue.peek();
+//        queue.dequeue();
+//        queue.dequeue();
+
 
         System.out.println(queue);
+        System.out.println(queue.peek());
         System.out.println(queue.isEmpty());
 //        System.out.println(queue.peek());
 //        queue.dequeue();
 
 
-//        -------------------------
+//        ------------------------- code challenge 11--------------------
         PseudoQueue stack1 = new PseudoQueue();
 
-        stack1.enqueue(20);
-        stack1.enqueue(15);
         stack1.enqueue(10);
+        stack1.enqueue(15);
+        stack1.enqueue(20);
 
         System.out.println(stack1);
 
 
-        stack1.enqueue(5);
+        stack1.enqueue(1);
         System.out.println(stack1);
 
         System.out.println(stack1.dequeue());
@@ -63,7 +66,7 @@ public class App {
         System.out.println(stack1.dequeue());
         System.out.println(stack1);
 
-        stack1.enqueue(7);
+        stack1.enqueue(3);
         System.out.println(stack1);
         //    -------------
         AnimalShelter.enqueue(new Cat("oneCat"));
