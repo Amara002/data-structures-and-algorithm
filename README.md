@@ -14,3 +14,4 @@
 |  stack-queue-pseudo    |  [code challenge eleven](https://github.com/Amara002/data-structures-and-algorithm/tree/stack-queue-pseudo)        |
 |stackQueueAnimalShelter |  [code challenge twelve](https://github.com/Amara002/data-structures-and-algorithm/tree/stack-queue-animal-shelter)|
 |  stack-queue-brackets  |  [code challenge thirteen](https://github.com/Amara002/data-structures-and-algorithm/tree/stack-queue-brackets)    |
+|  tree-max              |  [code challenge one](https://github.com/Amara002/data-structures-and-algorithm/tree/tree-max)                     |
