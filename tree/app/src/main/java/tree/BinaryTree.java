@@ -2,7 +2,7 @@ package tree;
 
 import java.util.ArrayList;
 
-public class BinaryTree<T> {
+public class BinaryTree<T> extends BreadthFirst{
     Node<T> root;
     public ArrayList<Integer> preOrderArr = new ArrayList<>();
     public ArrayList<Integer> inOrderArr = new ArrayList<>();
