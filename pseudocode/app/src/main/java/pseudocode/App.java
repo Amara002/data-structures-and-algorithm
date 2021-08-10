@@ -4,6 +4,7 @@
 package pseudocode;
 
 import pseudocode.insertionSort.InsertionSort;
+import pseudocode.mergeSort.MergeSort;
 
 import java.util.Arrays;
 
@@ -15,14 +16,22 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
 
-        int arr[] = {8, 4, 23, 42, 16, 15};
+//        int arr[] = {8, 4, 23, 42, 16, 15};
+//
+//        InsertionSort insertionSort = new InsertionSort();
+//       insertionSort.insertionSort(arr);
+//
+//       for( int arr1 : arr){
+//           System.out.println(arr1);
+//       }
+//        System.out.println(Arrays.toString(arr));
 
-        InsertionSort insertionSort = new InsertionSort();
-       insertionSort.insertionSort(arr);
+        int [] mergeArr = {8, 4, 23, 42, 16, 15};
+        MergeSort mergeSort = new MergeSort();
 
-       for( int arr1 : arr){
-           System.out.println(arr1);
-       }
-        System.out.println(Arrays.toString(arr));
+        mergeSort.mergeSort(mergeArr);
+        System.out.println("Merge Array " + Arrays.toString(mergeArr));
     }
+
+
 }
