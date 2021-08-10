@@ -3,67 +3,67 @@
  */
 package tree;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
-class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-    }
-    BinaryTree tree1 = new BinaryTree();
-    @Test
-    public void TestEmpty() {
-        assertEquals("BinaryTree{root=null}",tree1.toString());
-    }
-
-    @Test
-    public void TestSingle() {
-        tree1.root=new Node(5);
-        assertEquals("BinaryTree{root=Node{key=5, left=null, right=null}}",tree1.toString());
-    }
-    @Test
-    public void TestChild() {
-        tree1.root=new Node(5);
-        tree1.root.left=new Node(2);
-        tree1.root.right=new Node(3);
-        assertEquals("BinaryTree{root=Node{key=5, left=Node{key=2, left=null, right=null}, right=Node{key=3, left=null, right=null}}}",tree1.toString());
-    }
-    @Test
-    public void rootLeft() {
-        tree1.root=new Node(5);
-        tree1.root.left=new Node(2);
-        assertEquals("BinaryTree{root=Node{key=5, left=Node{key=2, left=null, right=null}, right=null}}",tree1.toString());
-    }
-
-    @Test
-    public void TestPreOrder() {
-        tree1.root = new Node(1);
-        tree1.root.left = new Node(2);
-        tree1.root.right = new Node(3);
-        tree1.root.left.left = new Node(4);
-        tree1.root.left.right = new Node(5);
-        tree1.preOrder(tree1.root);
-        assertEquals("[1, 2, 4, 5, 3]",String.valueOf(tree1.preOrderArr));
-    }
-    @Test
-    public void TestPostOrder() {
-        tree1.root = new Node(1);
-        tree1.root.left = new Node(2);
-        tree1.root.right = new Node(3);
-        tree1.root.left.left = new Node(4);
-        tree1.root.left.right = new Node(5);
-        tree1.postorder(tree1.root);
-        assertEquals("[4, 5, 2, 3, 1]",String.valueOf(tree1.postOrderArr));
-    }
-    @Test
-    public void TestInOrder() {
-        tree1.root = new Node(1);
-        tree1.root.left = new Node(2);
-        tree1.root.right = new Node(3);
-        tree1.root.left.left = new Node(4);
-        tree1.root.left.right = new Node(5);
-        tree1.inorder(tree1.root);
-        assertEquals("[4, 2, 5, 1, 3]",String.valueOf(tree1.inOrderArr));
-    }
-}
+//import org.junit.jupiter.api.Test;
+//import static org.junit.jupiter.api.Assertions.*;
+//
+//class AppTest {
+//    @Test void appHasAGreeting() {
+//        App classUnderTest = new App();
+//        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+//    }
+//    BinaryTree tree1 = new BinaryTree();
+//    @Test
+//    public void TestEmpty() {
+//        assertEquals("BinaryTree{root=null}",tree1.toString());
+//    }
+//
+//    @Test
+//    public void TestSingle() {
+//        tree1.root=new Node(5);
+//        assertEquals("BinaryTree{root=Node{key=5, left=null, right=null}}",tree1.toString());
+//    }
+//    @Test
+//    public void TestChild() {
+//        tree1.root=new Node(5);
+//        tree1.root.left=new Node(2);
+//        tree1.root.right=new Node(3);
+//        assertEquals("BinaryTree{root=Node{key=5, left=Node{key=2, left=null, right=null}, right=Node{key=3, left=null, right=null}}}",tree1.toString());
+//    }
+//    @Test
+//    public void rootLeft() {
+//        tree1.root=new Node(5);
+//        tree1.root.left=new Node(2);
+//        assertEquals("BinaryTree{root=Node{key=5, left=Node{key=2, left=null, right=null}, right=null}}",tree1.toString());
+//    }
+//
+//    @Test
+//    public void TestPreOrder() {
+//        tree1.root = new Node(1);
+//        tree1.root.left = new Node(2);
+//        tree1.root.right = new Node(3);
+//        tree1.root.left.left = new Node(4);
+//        tree1.root.left.right = new Node(5);
+//        tree1.preOrder(tree1.root);
+//        assertEquals("[1, 2, 4, 5, 3]",String.valueOf(tree1.preOrderArr));
+//    }
+//    @Test
+//    public void TestPostOrder() {
+//        tree1.root = new Node(1);
+//        tree1.root.left = new Node(2);
+//        tree1.root.right = new Node(3);
+//        tree1.root.left.left = new Node(4);
+//        tree1.root.left.right = new Node(5);
+//        tree1.postorder(tree1.root);
+//        assertEquals("[4, 5, 2, 3, 1]",String.valueOf(tree1.postOrderArr));
+//    }
+//    @Test
+//    public void TestInOrder() {
+//        tree1.root = new Node(1);
+//        tree1.root.left = new Node(2);
+//        tree1.root.right = new Node(3);
+//        tree1.root.left.left = new Node(4);
+//        tree1.root.left.right = new Node(5);
+//        tree1.inorder(tree1.root);
+//        assertEquals("[4, 2, 5, 1, 3]",String.valueOf(tree1.inOrderArr));
+//    }
+//}
