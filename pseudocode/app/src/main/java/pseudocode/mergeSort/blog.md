@@ -1,6 +1,6 @@
 # Merge Sort
 
-## Trace
+## Tracing
 Sample Array: [8,4,23,42,16,15]
 
 - At the beginning, n, which is the length of the array, is bigger than 1. So, n = 6 and mid = 3 which is 42 as an index.
