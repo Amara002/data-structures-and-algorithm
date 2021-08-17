@@ -15,9 +15,9 @@ class AppTest {
     @Test
     public void test(){
 
-        HashTable<String, Integer> clubs = new HashTable<String, Integer>();
+        HashTable<String, Integer> resturant = new HashTable<String, Integer>();
 
-        assertTrue(clubs.isEmpty());
+        assertTrue(resturant.isEmpty());
 
     }
     @Test
