@@ -23,5 +23,10 @@ public class App {
         System.out.println("Delete Sally => " + studentAllowances.remove("Sally"));
         System.out.println("The size is => " + studentAllowances.getSize());
         System.out.println("Array cotains Sally =>" + studentAllowances.contains("Sally"));
+
+
+//        challenge 31
+        String Amara = "I am a student in LTUC and I like  ";
+        System.out.println("the first repeated word: " + studentAllowances.repeatedWord(Amara));
     }
 }
