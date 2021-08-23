@@ -6,6 +6,10 @@ package hashTable;
 import hashTable.BinaryTree.BinaryTree;
 import hashTable.BinaryTree.Node;
 
+import java.util.HashMap;
+
+import static hashTable.HashTable.leftJoin;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -64,5 +68,23 @@ public class App {
         tree2.getRoot().getLeft().getRight().setRight(new Node(175));
 
         System.out.println(trees.treeIntersection(tree1,tree2));
+
+//        codeChallenge 33
+        HashMap<String, String> firstHashMap = new HashMap<>();
+        HashMap<String, String> secondHashMap = new HashMap<>();
+
+        firstHashMap.put("fond", "enamored");
+        firstHashMap.put("wrath", "anger");
+        firstHashMap.put("diligent", "employed");
+        firstHashMap.put("outfit", "garb");
+        firstHashMap.put("guide", "usher");
+
+        secondHashMap.put("fond", "averse");
+        secondHashMap.put("wrath", "delight");
+        secondHashMap.put("diligent", "idle");
+        secondHashMap.put("guide", "follow");
+        secondHashMap.put("flow", "jam");
+
+        System.out.println(leftJoin(firstHashMap, secondHashMap));
     }
 }
