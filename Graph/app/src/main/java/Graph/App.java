@@ -37,7 +37,7 @@ public class App {
 
 //        System.out.println(graph.bft());
         System.out.println(graph.dft(graph, "Alice"));
-        System.out.println(graph.bft(graph, "Alice"));
+        System.out.println(graph.bft("Alice"));
 
         System.out.println();
 
@@ -46,6 +46,30 @@ public class App {
         System.out.println();
 
         System.out.println(graph.getNeighbors("Bob"));
+
+//        code challege 36
+        Graph graph1 = new Graph();
+
+        graph1.addVertex("Pandora");
+        graph1.addVertex("Arendelle");
+        graph1.addVertex("Metroville");
+        graph1.addVertex("Monstroplolis");
+        graph1.addVertex("Narnia");
+        graph1.addVertex("Naboo");
+
+        graph1.addEdge("Pandora", "Arendelle");
+        graph1.addEdge("Arendelle", "Metroville");
+        graph1.addEdge("Arendelle", "Monstroplolis");
+        graph1.addEdge("Metroville", "Narnia");
+        graph1.addEdge("Metroville", "Naboo");
+        graph1.addEdge("Metroville", "Monstroplolis");
+        graph1.addEdge("Monstroplolis", "Naboo");
+        graph1.addEdge("Narnia", "Naboo");
+
+
+        System.out.println(graph1.bft("Pandora"));
+
+
     }
 }
 
