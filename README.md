@@ -1,21 +1,35 @@
 # data-structures-and-algorithm
 
+## Challenge
+***Implement a graph with these method:***
 
-## Table of content 
+* AddNode()
+* AddEdge()
+* GetNodes()
+* GetNeighbors()
+* Size()
 
-|  Name                  |  link                                                                                                              |
-|------------------------|--------------------------------------------------------------------------------------------------------------------|
-|  array-reverse         |  [code challenge one](https://github.com/Amara002/data-structures-and-algorithm/tree/array-reverse)                |
-|  array-insert-shift    |  [code challenge two](https://github.com/Amara002/data-structures-and-algorithm/tree/array-insert-shift)           |
-|  array-bianary-search  |  [code challenge three](https://github.com/Amara002/data-structures-and-algorithm/tree/array-binary-search)        |
-|  linked-list-kth       |  [code challenge seven](https://github.com/Amara002/data-structures-and-algorithm/tree/linked-list-kth)            |
-|  linked-list-zip       |  [code challenge eight](https://github.com/Amara002/data-structures-and-algorithm/tree/linked-list-kth)            |
-|  stack-and-queue       |  [code challenge ten](https://github.com/Amara002/data-structures-and-algorithm/tree/stack-and-queue)              |
-|  stack-queue-pseudo    |  [code challenge eleven](https://github.com/Amara002/data-structures-and-algorithm/tree/stack-queue-pseudo)        |
-|stackQueueAnimalShelter |  [code challenge twelve](https://github.com/Amara002/data-structures-and-algorithm/tree/stack-queue-animal-shelter)|
-|  stack-queue-brackets  |  [code challenge thirteen](https://github.com/Amara002/data-structures-and-algorithm/tree/stack-queue-brackets)    |
-|      tree              |  [code challenge fifteen](https://github.com/Amara002/data-structures-and-algorithm/tree/trees)                    |
-|     tree-max           |  [code challenge sixteen](https://github.com/Amara002/data-structures-and-algorithm/tree/tree-max)                 |
-|  tree-breadth-first    |  [code challenge seventeen](https://github.com/Amara002/data-structures-and-algorithm/tree/tree-breadth-first)     |
-|  tree-fizz-buzz        |  [code challenge eighteen](https://github.com/Amara002/data-structures-and-algorithm/tree/tree-fizz-buzz)          |
+## Approach & Efficiency
+* AddVertex(): it is O(1) for both time and space complexity, since we are adding one Vertex to the adjacent list for graph.
+* AddEdge(): it is O(1) for both time and space complexity, since we are adding one edge to the adjacent list for graph.
+* GetVertiecs(): it is O(1) for both time and space complexity, since we are returning a set of vertex.
+* GetNeighbors(): it is O(n) for both time complexity and space complexity, since we will take a Vertex as input and iterate through the set of vertexes to see the neighbors.
+* Size(): it is O(n) for time complexity and O(1) for space complexity, since we will iterate through all nodes to get the size and return only one value.
+
+## API
+* AddVertex(): 
+
+Adds a new Vertex to the graph. Takes in the value of that Vertex. Returns the added Vertex
+
+* GetVertiecs(): 
+
+Returns all of the Vertiecs in the graph as a collection (set, list, or similar)
+
+* GetNeighbors(): 
+
+Returns a collection of edges connected to the given Vertex. Takes in a given Vertex. 
+
+* Size(): 
+
+Returns the total number of Vertiecs in the graph
 

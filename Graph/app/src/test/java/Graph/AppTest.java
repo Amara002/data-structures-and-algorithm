@@ -78,6 +78,15 @@ class AppTest {
         assertEquals("Vertex{label='Carl'}[]",graph.printGraph());
         assertEquals(1, graph.size());
     }
+    @Test
+    public void oneVertexAndOneEdge(){
+        Graph graph = new Graph();
+
+        graph.addVertex("Bob");
+        graph.removeEdge("Bob","Bob");
+
+        assertEquals("Vertex{label='Bob'}[]",graph.printGraph());
+    }
 
     @Test
     public void removeEdge(){
@@ -91,4 +100,5 @@ class AppTest {
         graph.removeEdge("Carl", "Bob");
         assertEquals("Vertex{label='Bob'}[]Vertex{label='Carl'}[]", graph.printGraph());
     }
+
 }
