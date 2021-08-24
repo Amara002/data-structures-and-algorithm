@@ -64,7 +64,7 @@ public class LeftJoinTest {
     public void test_leftBothEmptyHashMap(){
         HashMap h1 = new HashMap();
         HashMap h2 = new HashMap();
-        
+
 
         assertEquals("[]", leftJoin(h1, h2).toString());
 
