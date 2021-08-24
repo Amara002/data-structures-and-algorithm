@@ -77,15 +77,15 @@ public class Graph {
 
         return visited;
     }
-
-    Set<String> bft(Graph graph, String root) {
+// code challenge 36
+    Set<String> bft(String root) {
         Set<String> visited = new LinkedHashSet<>();
         Queue<String> queue = new LinkedList<>();
         queue.add(root);
         visited.add(root);
         while (!queue.isEmpty()) {
             String vertex = queue.poll();
-            for (Vertex v : graph.getNeighbors(vertex)) {
+            for (Vertex v : getNeighbors(vertex)) {
                 if (!visited.contains(v.data)) {
                     visited.add(v.data);
                     queue.add(v.data);
@@ -94,6 +94,7 @@ public class Graph {
         }
         return visited;
     }
+//    -----------------
 
     public List<Vertex> getNeighbors(String data) {
         return adjVertices.get(new Vertex(data));
