@@ -39,7 +39,7 @@ public class App {
         System.out.println();
 
 //        System.out.println(graph.bft());
-        System.out.println(graph.dft(graph, "Alice"));
+        System.out.println(graph.dft("Alice"));
         System.out.println(graph.bft("Alice"));
 
         System.out.println();
@@ -51,6 +51,7 @@ public class App {
         System.out.println(graph.getNeighbors("Bob"));
 
 //        code challege 36
+
         Graph graph1 = new Graph();
 
         graph1.addVertex("Pandora");
@@ -69,8 +70,8 @@ public class App {
         graph1.addEdge("Monstroplolis", "Naboo");
         graph1.addEdge("Narnia", "Naboo");
 
-
         System.out.println(graph1.bft("Pandora"));
+
 
 //        code challenge 37
         Graph graph2 = new Graph();
@@ -99,6 +100,26 @@ public class App {
         System.out.println("First Trip ---> "+graph2.businessTrip(graph2,cities));
 
 
+//        code challenge 38
+        Graph graph3 = new Graph();
+
+        graph3.addVertex("Pandora");
+        graph3.addVertex("Arendelle");
+        graph3.addVertex("Metroville");
+        graph3.addVertex("Monstroplolis");
+        graph3.addVertex("Narnia");
+        graph3.addVertex("Naboo");
+
+        graph3.addEdge("Pandora", "Arendelle");
+        graph3.addEdge("Arendelle", "Metroville");
+        graph3.addEdge("Arendelle", "Monstroplolis");
+        graph3.addEdge("Metroville", "Narnia");
+        graph3.addEdge("Metroville", "Naboo");
+        graph3.addEdge("Metroville", "Monstroplolis");
+        graph3.addEdge("Monstroplolis", "Naboo");
+        graph3.addEdge("Narnia", "Naboo");
+
+        System.out.println(graph3.dft("Pandora"));
     }
 }
 
