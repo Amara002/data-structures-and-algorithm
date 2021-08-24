@@ -59,7 +59,8 @@ public class Graph {
         return adjVertices.size();
     }
 
-    Set<String> dft(Graph graph, String root) {
+//    code challenge 38
+    Set<String> dft(String root) {
         Set<String> visited = new LinkedHashSet<>();
         Stack<String> stack = new Stack<>();
         stack.push(root);
@@ -69,7 +70,7 @@ public class Graph {
             if (!visited.contains(vertex)) {
                 visited.add(vertex);
 
-                for (Vertex v : graph.getNeighbors(vertex)) {
+                for (Vertex v : getNeighbors(vertex)) {
                     stack.push(v.data);
                 }
             }
@@ -77,7 +78,7 @@ public class Graph {
 
         return visited;
     }
-
+// ----------------------------------
     // code challenge 36
     Set<String> bft(String root) {
         Set<String> visited = new LinkedHashSet<>();
